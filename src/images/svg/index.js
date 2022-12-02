@@ -1,3 +1,8 @@
+export { default as IconTasks } from './tasks.svg'
+export { default as IconRoadMap } from './roadmap.svg'
+export { default as IconNotes } from './notes.svg'
+export { default as IconFiles } from './files.svg'
+export { default as IconCalendar } from './calendar.svg'
 export { default as IconLogo } from './logo.svg'
 export { default as IconSearch } from './search.svg'
 export { default as IconArray } from './array.svg'

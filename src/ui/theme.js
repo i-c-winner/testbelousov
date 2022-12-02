@@ -4,7 +4,9 @@ const theme = {
         bgMain: "#f5f5f5",
         textWhite: "#fff",
         textGrey: "#8c939f",
-        textBlack: "#000"
+        textBlack: "#000",
+        bgButtonEnabled: "#0094ff",
+        bgButtonDisabled: '#f5f8fa',
 }
 
 export {theme}

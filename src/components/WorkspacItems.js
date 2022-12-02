@@ -13,10 +13,13 @@ const TitleWrapper=styled.h3`
 `
 const TextTitle=styled.p`
 color: ${textWhite};
-  margin-left: 5px;
+  margin: 0;
+  &:hover {
+    cursor: pointer;
+  }
 `
 const ItemsBox=styled.div`
-padding: 16px;
+  padding: 16px;
   color: ${textGrey}`
 function Items(props) {
     const [visible, setVisile]= useState(true)
@@ -24,17 +27,17 @@ function Items(props) {
     return(
         <ItemsBox >
         <TitleWrapper onClick={()=>setVisile(!visible)} >
-<Icon className= {visible? "array array_up": "array array_down"} src={IconArray} />
-            {props.title}
+            <Icon className= {visible? "array array_up": "array array_down"} src={IconArray} />
+              <TextTitle>
+                  {props.title}
+              </TextTitle>
+
         </TitleWrapper>
             {visible?<div >
                 {props.items.map(item=>{
-
                     return <Item key={item} item={item}/>
                 })   }
             </div> : null}
-
-
         </ItemsBox>
 
     )

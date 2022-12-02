@@ -21,3 +21,41 @@
         transform: rotate(180deg);
     }
 }
+
+.icon {
+    &_tools{
+        margin-right: 10px;
+    }
+}
+.radio {
+    &_header{
+        &:before {
+            contain: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+              &:checked {
+                background-color: green;
+              }
+        }
+    }
+}
+.button{
+    &_header {
+        border: none;
+
+        &:hover {
+            cursor: pointer;
+        }
+        &_enabled{
+            background-color: var(--bg-button-enabled);
+            color: var(--color-button-enabled);
+        }
+        &_disabled {
+            background-color: var(--bg-button-disabled);
+            color: var(--color-button-disabled);
+        }
+    }
+}

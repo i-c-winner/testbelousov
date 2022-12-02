@@ -1,5 +1,10 @@
 @import "css/components.scss";
-
+:root {
+    --bg-button-enabled: #0094ff;
+    --bg-button-disabled: #f5f8fa;
+    --color-button-enabled: #fff;
+    --color-button-disabled: #000;
+}
 body {
     margin: 0;
 }
