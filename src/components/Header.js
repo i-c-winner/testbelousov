@@ -1,7 +1,10 @@
-import React, {useState, useRef} from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
 import {theme} from "../ui/theme";
-import {keyboardImplementation} from "@testing-library/user-event/dist/keyboard/keyboardImplementation";
+import HeaderModal from "./headerModal";
+import {IconArrow} from "../images/svg";
+import Icon from "../utils/Icon";
+
 
 const { bgButtonDisabled, bgButtonEnabled,textGrey, textWhite, textBlack, bgMain}=theme
 
@@ -25,12 +28,12 @@ const ButtonElement= ({className, children, onClick})=>{
 }
 
 const Button =styled(ButtonElement)`
-  margin-left: 20px;
-     width: 119px;
-     height: 40px;
-     border-radius: 50px;
-     text-align: center;
-     position: relative;
+   margin-left: 20px;
+   width: 119px;
+   height: 40px;
+   border-radius: 50px;
+   text-align: center;
+   position: relative;
 `
 
 const InfoBox=styled.div`
@@ -51,6 +54,9 @@ function getClasses() {
             return 'button button_header button_header_enabled'
         }  return 'button button_header button_header_disabled'
 }
+function getVisibleMenu () {
+        return this.name===selected? true: false
+}
 
     return (
         <HeaderBox>
@@ -61,7 +67,8 @@ function getClasses() {
                                   onClick={clickButton.bind({name: button})}
                                   value={button}>
                                      {button}
-
+                       <Icon className={getVisibleMenu.bind({name: button})()?'arrow arrow_header': 'arrow arrow_header arrow_header_up'} src={IconArrow} />
+                       {/*{getVisibleMenu.bind({name: button})()?<HeaderModal />: null}*/}
                            </Button>
                 })}
             </ButtonsBox>

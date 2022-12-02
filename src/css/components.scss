@@ -10,10 +10,15 @@
     padding-right: 10px;
     line-height: 34px;
 }
-.array {
+.arrow {
     margin-right: 10px;
     position: relative;
-
+    &_header{
+        float: right;
+        &_up{
+            transform: rotate(180deg);
+        }
+    }
     &:hover {
         cursor: pointer;
     }

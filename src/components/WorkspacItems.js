@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Item from "./Item";
 import {theme} from "../ui/theme";
 import Icon from "../utils/Icon";
-import { IconArray } from "../images/svg";
+import { IconArrow } from "../images/svg";
 
 const {textWhite, textGrey}=theme
 const TitleWrapper=styled.h3`
@@ -27,7 +27,7 @@ function Items(props) {
     return(
         <ItemsBox >
         <TitleWrapper onClick={()=>setVisile(!visible)} >
-            <Icon className= {visible? "array array_up": "array array_down"} src={IconArray} />
+            <Icon className= {visible? "arrow arrow_up": "arrow arrow_down"} src={IconArrow} />
               <TextTitle>
                   {props.title}
               </TextTitle>
