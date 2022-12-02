@@ -4,7 +4,7 @@ import Icon from "../utils/Icon";
 
 const Div=styled.div`
 `
-function WorkspaceItem (props) {
+function Item (props) {
     return (<Div>
         <Icon src=""></Icon>
         <p>{props.item}</p>
@@ -13,4 +13,4 @@ function WorkspaceItem (props) {
            )
 }
 
-export default WorkspaceItem
+export default Item

@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import styled from "styled-components";
-import WorkspaceItem from "./WorkspaceItem";
+import Item from "./Item";
 import {theme} from "../ui/theme";
 import Icon from "../utils/Icon";
 import { IconArray } from "../images/svg";
@@ -15,14 +15,14 @@ const TextTitle=styled.p`
 color: ${textWhite};
   margin-left: 5px;
 `
-const Items=styled.div`
+const ItemsBox=styled.div`
 padding: 16px;
   color: ${textGrey}`
-function WorkSpaceItems(props) {
+function Items(props) {
     const [visible, setVisile]= useState(true)
 
     return(
-        <Items >
+        <ItemsBox >
         <TitleWrapper onClick={()=>setVisile(!visible)} >
 <Icon className= {visible? "array array_up": "array array_down"} src={IconArray} />
             {props.title}
@@ -30,14 +30,14 @@ function WorkSpaceItems(props) {
             {visible?<div >
                 {props.items.map(item=>{
 
-                    return <WorkspaceItem key={item} item={item}/>
+                    return <Item key={item} item={item}/>
                 })   }
             </div> : null}
 
 
-        </Items>
+        </ItemsBox>
 
     )
 }
 
-export default WorkSpaceItems
+export default Items

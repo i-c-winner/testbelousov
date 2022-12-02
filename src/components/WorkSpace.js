@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import styled from "styled-components";
 import avatar from '../images/img/avatar.png'
 import {theme} from "../ui/theme";
-import WorkSpaceItems from "./WorkspacItems";
+import Items from "./WorkspacItems";
 
 const favorites=['Marceting', 'Mobille APP']
 const meProject=['Marceting', 'Lending Pages', 'Mobille App', 'House Construction']
@@ -31,8 +31,8 @@ function WorkSpace () {
 
 
 </Title>
-    <WorkSpaceItems  title='Favorites' items={favorites}/>
-    <WorkSpaceItems  title='My Proejcts' items={meProject}/>
+    <Items  title='Favorites' items={favorites}/>
+    <Items  title='My Proejcts' items={meProject}/>
 
 
 </Div>
