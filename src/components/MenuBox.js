@@ -1,26 +1,29 @@
 import React from "react";
 import styled from "styled-components";
 import {theme} from "../ui/theme";
-import Icon from "./Icon";
-import {Logo} from '../svg/index'
+import Icon from "../utils/Icon";
+import {IconLogo} from '../images/svg/index'
+import Search from "../utils/Search";
+import WorkSpace from "./WorkSpace";
 
 const {bgMenu} =theme
-const styleForlogo={
-    widthLogo: "131px",
-    heightLogo: "36px",
-    }
 const Div=styled.div`
   width: 219px;
   background-color: ${bgMenu};
   height: 100vh;  
 `
 function MenuBox () {
+const style={
+    bgColor: '#2D4071',
+}
 
     return (
         <Div>
             <div className="logo logo_main-box">
-                <Icon styles={styleForlogo} src={Logo} />
+                <Icon src={IconLogo} />
             </div>
+            <Search style={style}/>
+            <WorkSpace />
         </Div>
     )
 }

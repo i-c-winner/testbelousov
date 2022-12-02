@@ -4,10 +4,9 @@ import {theme} from "../ui/theme";
 import {ReactSVG} from "react-svg";
 
 function Icon (props) {
-    const {src, styles}=props
-    debugger
+    const {src}=props
     return (
-        <ReactSVG src={src} />
+        <ReactSVG className={props.className} src={src} />
     )
         }
 export default Icon
