@@ -7,6 +7,7 @@ import Icon from "./Icon";
 import Search from "./Search";
 import avatar from "../images/img/avatar.png";
 import WithCounter from "./WithCounter";
+import HeaderModal from "./HeaderModal";
 
 
 const { bgButtonDisabled, bgButtonEnabled,textGrey, textWhite, textBlack, bgMain}=theme
@@ -64,9 +65,14 @@ function Header() {
     const style={
         bgColor: "#f5f8fa"
     }
-    const [selected, setSelected]= useState(buttons[0])
+    const [selected, setSelected]= useState(null)
 function clickButton () {
-    setSelected(this.name)
+    if (selected===this.name){
+        setSelected(null)
+    } else {
+        setSelected(this.name)
+    }
+
 }
 
 function getClasses() {
@@ -90,7 +96,7 @@ function getVisibleMenu () {
                        <Icon className={getVisibleMenu.bind({name: button})()?'arrow arrow_header':
                            'arrow arrow_header arrow_header_up'}
                             src={IconArrow} />
-                       {/*{getVisibleMenu.bind({name: button})()?<HeaderModal />: null}*/}
+                       {getVisibleMenu.bind({name: button})()?<HeaderModal />: null}
                            </Button>
                 })}
             </ButtonsBox>

@@ -17,6 +17,8 @@ const Count=styled.p`
   border-radius: ${props=>props.theme.styles.borderRadius};
   color: ${props=>props.theme.styles.color};
   font-size: ${props=>props.theme.styles.fontSize};  
+  width: ${props=>props.theme.styles.width|| ''};
+  height: ${props=>props.theme.styles.height|| ''};
 `
 function WithCounter(props) {
     Count.defaultProps={
