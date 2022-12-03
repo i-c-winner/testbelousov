@@ -7,9 +7,15 @@ const Main=styled.div`
   padding-right: 20px;
   background-color: #fff;
 `
+const Body=styled.div`
+  padding: 27px 20px;
+`
 function MainBox(){
     return(<Main>
         <Header />
+            <Body>
+
+            </Body>
     </Main>
     )
 }

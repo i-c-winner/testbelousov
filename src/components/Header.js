@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import styled from "styled-components";
 import {theme} from "../ui/theme";
-import HeaderModal from "./HeaderModal";
+import {IconBall} from "../images/svg";
 import {IconArrow} from "../images/svg";
 import Icon from "./Icon";
 import Search from "./Search";
@@ -51,7 +51,16 @@ const InfoBox=styled.div`
 const buttons=['+ add New', 'kanbah', 'filter']
 
 function Header() {
-
+    const stylesForCounter={
+    bgColor: "red",
+    padding: "3px",
+    position: "absolute",
+    top: "-35px",
+    left: "9px",
+    borderRadius: '4px',
+    color: "white",
+    fontSize: "13px"
+}
     const style={
         bgColor: "#f5f8fa"
     }
@@ -87,7 +96,7 @@ function getVisibleMenu () {
             </ButtonsBox>
             <InfoBox>
                 <Search classes='search search_info' style={style}/>
-                <WithCounter delta={{x:-35,y:9 }}count="33+"/>
+                <WithCounter src={IconBall} styles={stylesForCounter} count="33+"/>
                 <img width="22px"  height="22px" src={avatar} alt='Аватар'/>
             </InfoBox>
         </HeaderBox>

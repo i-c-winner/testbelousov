@@ -9,31 +9,24 @@ const Div=styled.div`
  right: 10px; 
 `
 const Count=styled.p`
-  background-color: red;
-  padding: 3px;
-  position: absolute;
-  top: ${(props=> {
-      console.log(props)
-     return  props.theme.x+'px'
-})};
-  left: ${props=>props.theme.y+'px'};
-  border-radius: 4px;
-  color: white;
-  font-size: 13px;  
+  background-color:${(props=>props.theme.styles.bgColor)};
+  padding: ${props=>props.theme.styles.padding};
+  position: ${props=>props.theme.styles.position};
+  top: ${props=>props.theme.styles.top};
+  left: ${props=>props.theme.styles.left};
+  border-radius: ${props=>props.theme.styles.borderRadius};
+  color: ${props=>props.theme.styles.color};
+  font-size: ${props=>props.theme.styles.fontSize};  
 `
-
-
 function WithCounter(props) {
     Count.defaultProps={
         theme:{
-            x: props.delta.x,
-            y: props.delta.y
+            styles: props.styles
         }
-
     }
     return (
         <Div>
-           <Icon src={IconBall} />
+            {props.src? <Icon src={props.src} />: null}
             <Count>{props.count}</Count>
         </Div>
     )
