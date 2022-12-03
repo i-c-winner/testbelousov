@@ -10,6 +10,14 @@ const TitleWrapper=styled.h3`
   display: flex;
   justify-content: start;
   color: ${textWhite}
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  margin-top: 0;
+  padding-left: 8px;
+  margin-bottom: 5px;
 `
 const TextTitle=styled.p`
 color: ${textWhite};

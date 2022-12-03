@@ -8,7 +8,7 @@ import WorkSpace from "./WorkSpace";
 
 const {bgMenu} =theme
 const Div=styled.div`
-  width: 219px;
+  min-width: 219px;
   background-color: ${bgMenu};
   height: 100vh;  
 `

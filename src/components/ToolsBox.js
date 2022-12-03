@@ -29,12 +29,18 @@ const items=[{
 const ToolsTitle=styled.h2`
   color: ${textGrey};
   margin: 0;
+  padding-bottom: 28px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
 `
 const Tools=styled.div`
   background-color: ${bgTools};
   width: 154px;
   height: 100vh;
-  padding: 25px;
+  padding: 25px 25px 25px 13px;
 `
 function ToolsMenu () {
     return(

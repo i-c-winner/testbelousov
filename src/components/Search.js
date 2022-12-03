@@ -7,7 +7,7 @@ import {theme} from "../ui/theme";
 
 const {textWhite, textBlack} =theme
 const Div=styled.div`
-   padding: 16px;
+   padding: 0px 16px 15px 0;
    display: flex;
 `
 
