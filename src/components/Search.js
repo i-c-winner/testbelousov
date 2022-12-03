@@ -30,6 +30,7 @@ function Search (props){
     return (<Div>
         <Input  />
           <Icon className={props.classes} src={IconSearch}/>
+
     </Div>
         )
 

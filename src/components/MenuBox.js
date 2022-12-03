@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import {theme} from "../ui/theme";
-import Icon from "../utils/Icon";
+import Icon from "./Icon";
 import {IconLogo} from '../images/svg/index'
-import Search from "../utils/Search";
+import Search from "./Search";
 import WorkSpace from "./WorkSpace";
 
 const {bgMenu} =theme

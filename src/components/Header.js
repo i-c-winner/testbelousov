@@ -3,9 +3,10 @@ import styled from "styled-components";
 import {theme} from "../ui/theme";
 import HeaderModal from "./HeaderModal";
 import {IconArrow} from "../images/svg";
-import Icon from "../utils/Icon";
-import Search from "../utils/Search";
+import Icon from "./Icon";
+import Search from "./Search";
 import avatar from "../images/img/avatar.png";
+import WithCounter from "./WithCounter";
 
 
 const { bgButtonDisabled, bgButtonEnabled,textGrey, textWhite, textBlack, bgMain}=theme
@@ -15,7 +16,7 @@ const HeaderBox=styled.div`
   height: 80px;
   display: flex;
   justify-content: space-between;
-  box-shadow: 5px 5px 10px grey;
+  border-bottom: 3px solid rgba(25,25,25, .1);
   `
 const ButtonsBox=styled.div`
   display: flex;
@@ -86,6 +87,7 @@ function getVisibleMenu () {
             </ButtonsBox>
             <InfoBox>
                 <Search classes='search search_info' style={style}/>
+                <WithCounter delta={{x:-35,y:9 }}count="33+"/>
                 <img width="22px"  height="22px" src={avatar} alt='Аватар'/>
             </InfoBox>
         </HeaderBox>

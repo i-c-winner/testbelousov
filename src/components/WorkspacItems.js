@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import styled from "styled-components";
 import Item from "./Item";
 import {theme} from "../ui/theme";
-import Icon from "../utils/Icon";
+import Icon from "./Icon";
 import { IconArrow } from "../images/svg";
 
 const {textWhite, textGrey}=theme

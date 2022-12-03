@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Icon from "../utils/Icon";
+import Icon from "./Icon";
 
 const Div=styled.div`
   display: flex;
