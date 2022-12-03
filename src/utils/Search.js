@@ -5,7 +5,7 @@ import {IconSearch} from "../images/svg";
 import Icon from "./Icon";
 import {theme} from "../ui/theme";
 
-const {textWhite} =theme
+const {textWhite, textBlack} =theme
 const Div=styled.div`
    padding: 16px;
    display: flex;
@@ -14,7 +14,7 @@ const Div=styled.div`
 function Search (props){
     const Input=styled.input`
       padding-left: 5px;
-      color: ${textWhite};
+      color: ${textBlack};
       border-radius: 5px 0 0 5px;
       height: 32px;  
       border-width: 0;
@@ -28,8 +28,8 @@ function Search (props){
         }
     }
     return (<Div>
-        <Input />
-          <Icon className="search search_menu" src={IconSearch}/>
+        <Input  />
+          <Icon className={props.classes} src={IconSearch}/>
     </Div>
         )
 

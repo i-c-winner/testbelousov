@@ -1,9 +1,11 @@
 import React, {useState} from "react";
 import styled from "styled-components";
 import {theme} from "../ui/theme";
-import HeaderModal from "./headerModal";
+import HeaderModal from "./HeaderModal";
 import {IconArrow} from "../images/svg";
 import Icon from "../utils/Icon";
+import Search from "../utils/Search";
+import avatar from "../images/img/avatar.png";
 
 
 const { bgButtonDisabled, bgButtonEnabled,textGrey, textWhite, textBlack, bgMain}=theme
@@ -13,6 +15,7 @@ const HeaderBox=styled.div`
   height: 80px;
   display: flex;
   justify-content: space-between;
+  box-shadow: 5px 5px 10px grey;
   `
 const ButtonsBox=styled.div`
   display: flex;
@@ -38,12 +41,19 @@ const Button =styled(ButtonElement)`
 
 const InfoBox=styled.div`
   width:300px;
-  border: 1px solid red;
   height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
 `
 const buttons=['+ add New', 'kanbah', 'filter']
 
 function Header() {
+
+    const style={
+        bgColor: "#f5f8fa"
+    }
     const [selected, setSelected]= useState(buttons[0])
 function clickButton () {
     setSelected(this.name)
@@ -67,12 +77,17 @@ function getVisibleMenu () {
                                   onClick={clickButton.bind({name: button})}
                                   value={button}>
                                      {button}
-                       <Icon className={getVisibleMenu.bind({name: button})()?'arrow arrow_header': 'arrow arrow_header arrow_header_up'} src={IconArrow} />
+                       <Icon className={getVisibleMenu.bind({name: button})()?'arrow arrow_header':
+                           'arrow arrow_header arrow_header_up'}
+                            src={IconArrow} />
                        {/*{getVisibleMenu.bind({name: button})()?<HeaderModal />: null}*/}
                            </Button>
                 })}
             </ButtonsBox>
-            <InfoBox />
+            <InfoBox>
+                <Search classes='search search_info' style={style}/>
+                <img width="22px"  height="22px" src={avatar} alt='Аватар'/>
+            </InfoBox>
         </HeaderBox>
     )
 }

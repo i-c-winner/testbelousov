@@ -3,13 +3,22 @@
         padding: 26px;
     }
 }
-.search_menu {
+.search{
     border-radius: 0 5px 5px 0;
-    background-color: #2D4071;
     text-align: center;
     padding-right: 10px;
     line-height: 34px;
+
+    &_menu {
+        background-color: #2D4071;
+    }
+
+    &_info {
+        background-color: #f5f8fa;
+        color: black;
+    }
 }
+
 .arrow {
     margin-right: 10px;
     position: relative;

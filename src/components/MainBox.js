@@ -5,6 +5,7 @@ import Header from "./Header";
 const Main=styled.div`
   width: 100%;
   padding-right: 20px;
+  background-color: #fff;
 `
 function MainBox(){
     return(<Main>

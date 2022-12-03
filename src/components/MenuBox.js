@@ -22,7 +22,7 @@ const style={
             <div className="logo logo_main-box">
                 <Icon src={IconLogo} />
             </div>
-            <Search style={style}/>
+            <Search classes="search search_menu" style={style}/>
             <WorkSpace />
         </Div>
     )
