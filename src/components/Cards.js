@@ -1,7 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 
-const CardsBox=styled.div`
+const CardsBoxElement=({className, children, onDragOver, onDrop})=>{
+    return <div className={className} children={children} onDragOver={onDragOver} onDrop={onDrop}>
+        {children}
+    </div>
+}
+const CardsBox=styled(CardsBoxElement)`
   display: flex;
   width: 282px;
   flex-flow: column;
@@ -10,7 +15,13 @@ const CardsBox=styled.div`
   padding-left: 4px;
   `
 
-const Card=styled.div`
+const CardElement=({className, children, onDragstart, draggable, id})=>{
+    return <div className={className} children={children} onDragStart={onDragstart} id={id} draggable={draggable}>
+        {children}
+    </div>
+}
+
+const Card=styled(CardElement)`
   &:first-child {
     margin-top: 41px;
   }
@@ -36,8 +47,19 @@ function getColor(card) {
 function Cards(props){
     const textDecoration = props.cards.title==='Compeled'? "line-through": 'initial'
 
+    function actionDragOver(event) {
+        event.preventDefault()
+    }
+    function actionDragStart(event) {
+        event.dataTransfer.setData('card', event.target.id)
+
+    }
+    function actionOnDrop(event) {
+        const id=event.dataTransfer.getData('card')
+        event.target.append(document.getElementById(id))
+    }
     return (
-        <CardsBox>
+        <CardsBox onDragOver={actionDragOver} onDrop={actionOnDrop}>
             {props.cards.cards.map((card, index)=>{
                 const color= getColor(props.cards)
                 Card.defaultProps={
@@ -46,7 +68,7 @@ function Cards(props){
                         textDecoration
                     }
                 }
-                return <Card key={index}>
+                return <Card key={index} id={card.text.slice(0, 5)} draggable="true" onDragstart={actionDragStart}>
                     <p>{card.text}</p>
                     <time>{card.time}</time>
                 </Card>
