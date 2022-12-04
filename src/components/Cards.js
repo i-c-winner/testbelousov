@@ -1,26 +1,18 @@
 import React from "react";
 import styled from "styled-components";
-import WithCounter from "./WithCounter";
 
 const CardsBox=styled.div`
   display: flex;
-  width: 270px;
+  width: 282px;
   flex-flow: column;
   align-items: center;
+  border-right: 1px solid rgba(25, 25, 25, .1);
+  padding-left: 4px;
   `
-const TitleBox=styled.h4`
-  text-align: center;
-  position: relative;
-  display: flex;
-  ;
-`
 
-const Title=styled.p`
-  margin-right: 25px;
-`
 const Card=styled.div`
-  &:nth-child(2){
-    margin-top: 50px;
+  &:first-child {
+    margin-top: 41px;
   }
   padding: 15px;
   background-color: ${props=>{
@@ -28,7 +20,6 @@ const Card=styled.div`
 }};
   border-radius: 7px;
   width: 85%;
-  height: 84px;
   margin-top: 10px;    
   min-width: 150px;
 `
@@ -40,25 +31,10 @@ function getColor(card) {
     const color=['#abedce', '#d8ddcc', '#ffdfba', '#f2bfa1']
     return color[render]
 }
-const stylesForCounter={
-    bgColor: "#efefff",
-    padding: "3px",
-    borderRadius: "50%",
-    color: "black",
-    fontSize: "13px",
-    width: "15px",
-    height: "15px",
 
-}
 function Cards(props){
     return (
-
         <CardsBox>
-            <TitleBox>
-                <Title>{props.cards.title}</Title>
-                {props.cards.title==="+ Create status"? null:
-                    <WithCounter styles={stylesForCounter} count={props.cards.count} />}
-            </TitleBox>
             {props.cards.cards.map((card, index)=>{
                 const color= getColor(props.cards)
                 Card.defaultProps={

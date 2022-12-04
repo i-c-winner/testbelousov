@@ -56,7 +56,7 @@ function Header() {
     bgColor: "red",
     padding: "3px",
     position: "absolute",
-    top: "-35px",
+    top: "-15px",
     left: "9px",
     borderRadius: '4px',
     color: "white",
@@ -108,5 +108,6 @@ function getVisibleMenu () {
         </HeaderBox>
     )
 }
+
 
 export default Header

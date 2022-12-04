@@ -10,7 +10,6 @@ const {bgMenu} =theme
 const Div=styled.div`
   min-width: 219px;
   background-color: ${bgMenu};
-  height: 100vh;  
 `
 function MenuBox () {
 const style={

@@ -39,7 +39,6 @@ const ToolsTitle=styled.h2`
 const Tools=styled.div`
   background-color: ${bgTools};
   min-width: 119px;
-  height: 100vh;
   padding: 25px 25px 25px 13px;
 `
 function ToolsMenu () {
