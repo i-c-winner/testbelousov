@@ -7,24 +7,24 @@ import Search from "./Search";
 import WorkSpace from "./WorkSpace";
 
 const {bgMenu} =theme
-const Div=styled.div`
+const SectionBox=styled.div`
   min-width: 219px;
   background-color: ${bgMenu};
 `
-function MenuBox () {
+function SectoionBox () {
 const style={
     bgColor: '#2D4071',
 }
 
     return (
-        <Div>
+        <SectionBox>
             <div className="logo logo_main-box">
                 <Icon src={IconLogo} />
             </div>
             <Search classes="search search_menu" style={style}/>
             <WorkSpace />
-        </Div>
+        </SectionBox>
     )
 }
 
-export default MenuBox
+export default SectoionBox

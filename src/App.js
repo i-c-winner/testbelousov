@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import MenuBox from "./components/MenuBox";
+import SectoionBox from "./components/SectoionBox";
 import ToolsMenu from "./components/ToolsBox";
 import MainBox from "./components/MainBox";
 const Div =styled.div`
@@ -11,7 +11,7 @@ const Div =styled.div`
 function App() {
   return (
     <Div>
-     <MenuBox />
+     <SectoionBox />
      <ToolsMenu />
      <MainBox />
     </Div>
