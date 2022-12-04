@@ -1,9 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import {IconBall} from "../images/svg";
 import Icon from "./Icon";
 
-const Div=styled.div`
+const WithCounterWrapper=styled.div`
  display: flex;
  position: relative;
  right: 10px; 
@@ -27,10 +26,10 @@ function WithCounter(props) {
         }
     }
     return (
-        <Div>
+        <WithCounterWrapper>
             {props.src? <Icon src={props.src} />: null}
             <Count>{props.count}</Count>
-        </Div>
+        </WithCounterWrapper>
     )
 }
 

@@ -6,7 +6,7 @@ import Item from "./Item";
 
 const { textGrey, bgTools} = theme
 
-const SectionTools=styled.div`
+const SectionToolsWrapper=styled.div`
   background-color: ${bgTools};
   min-width: 119px;
   padding: 25px 25px 25px 13px;
@@ -22,13 +22,13 @@ const ToolsTitle=styled.h2`
   font-size: 18px;
   line-height: 31px;`
 
-function ToolsMenu () {
+function SectionTools () {
     return(
-        <SectionTools>
+        <SectionToolsWrapper>
             <ToolsTitle>Tools</ToolsTitle>
             {items.map(item=><Item  key={item.name} classes="icon icon_tools" src={item.icon} item={item.name}/>)}
-        </SectionTools>
+        </SectionToolsWrapper>
     )
 }
 
-export default ToolsMenu
+export default SectionTools

@@ -6,7 +6,7 @@ import {newTask, createData, inProgress, scheduled, compeled} from "../constants
 import Titles from "./Titles";
 
 const createdStatus=[newTask, inProgress, scheduled, compeled]
-const SectionMain=styled.div`
+const SectionMainWrapper=styled.div`
   width: 100%;
   padding-right: 20px;
   background-color: #fff;
@@ -33,8 +33,8 @@ const StatusesWrapper=styled.div`
   display: flex;
   height: calc(100% - 61px);
 `
-function SectionMane(){
-    return(<SectionMain>
+function SectionMain(){
+    return(<SectionMainWrapper>
         <Header />
             <Body>
                <CreatedStatus>
@@ -51,7 +51,7 @@ function SectionMane(){
                    <Separator />
                </CreatingStatus>
             </Body>
-    </SectionMain>
+    </SectionMainWrapper>
     )
 }
-export default SectionMane
+export default SectionMain

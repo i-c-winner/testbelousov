@@ -31,8 +31,7 @@ function HeaderModal() {
     return(
         <Modal>
             {modal.map(item=>{
-                console.log(item)
-                return <Item key={item}>
+              return <Item key={item}>
                     {item}
                 </Item>
             })}
