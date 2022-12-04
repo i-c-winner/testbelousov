@@ -2,18 +2,19 @@ import React from "react";
 import styled from "styled-components";
 import WithCounter from "./WithCounter";
 
-const Title=styled.div`
-  text-align: center;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-`
-const TitleBox=styled.div`
+
+const TitleWrapper=styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-top: 20px;
   padding-bottom: 20px;
+`
+const Title=styled.div`
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 `
 const stylesForCounter={
     bgColor: "#e8ebef",
@@ -30,7 +31,7 @@ const stylesForCounter={
 
 function Titles(props) {
     return (
-        <TitleBox>
+        <TitleWrapper>
             {
                 props.titles.map(title=>{
                     return (
@@ -41,7 +42,7 @@ function Titles(props) {
                     )
                 })
             }
-        </TitleBox>
+        </TitleWrapper>
     )
 
 
