@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Icon from "./Icon";
 
-const Div=styled.div`
+const ItemWrapper=styled.div`
   display: flex;
   padding: 15px 0 0;
 `
@@ -15,10 +15,10 @@ const TextItem=styled.p`
   line-height: 16px;
 `
 function Item (props) {
-    return (<Div>
+    return (<ItemWrapper>
         <Icon className={props.classes} src={props.src||''}></Icon>
         <TextItem>{props.item}</TextItem>
-    </Div>
+    </ItemWrapper>
 
            )
 }

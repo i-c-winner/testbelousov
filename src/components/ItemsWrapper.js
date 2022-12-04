@@ -28,10 +28,11 @@ color: ${textWhite};
 `
 const ItemsBox=styled.div`
   padding: 16px;
-  color: ${textGrey}`
-function Items(props) {
-    const [visible, setVisile]= useState(true)
+  color: ${textGrey}
+`
 
+function ItemsWrapper(props) {
+    const [visible, setVisile]= useState(true)
     return(
         <ItemsBox >
         <TitleWrapper onClick={()=>setVisile(!visible)} >
@@ -51,4 +52,4 @@ function Items(props) {
     )
 }
 
-export default Items
+export default ItemsWrapper
