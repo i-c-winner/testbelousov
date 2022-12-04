@@ -34,11 +34,11 @@ const ToolsTitle=styled.h2`
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
-  line-height: 21px;
+  line-height: 31px;
 `
 const Tools=styled.div`
   background-color: ${bgTools};
-  width: 154px;
+  min-width: 119px;
   height: 100vh;
   padding: 25px 25px 25px 13px;
 `

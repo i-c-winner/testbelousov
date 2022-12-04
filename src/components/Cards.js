@@ -4,6 +4,7 @@ import WithCounter from "./WithCounter";
 
 const CardsBox=styled.div`
   display: flex;
+  width: 270px;
   flex-flow: column;
   align-items: center;
   `
@@ -51,6 +52,7 @@ const stylesForCounter={
 }
 function Cards(props){
     return (
+
         <CardsBox>
             <TitleBox>
                 <Title>{props.cards.title}</Title>

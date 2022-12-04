@@ -5,7 +5,8 @@ import {theme} from "../ui/theme";
 import Items from "./WorkspacItems";
 
 const favorites=['Marceting', 'Mobille APP']
-const meProject=['Marceting', 'Lending Pages', "Wedding", 'Mobille App', 'House Construction']
+const meProject=['Marceting', 'Lending Pages', "Wedding",
+    'Mobille App', 'House Construction']
 const {textWhite} =theme
 const Div=styled.div`
 `

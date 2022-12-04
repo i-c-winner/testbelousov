@@ -10,7 +10,7 @@ const Main=styled.div`
   background-color: #fff;
 `
 const Body=styled.div`
-  padding: 27px 20px;
+  padding: 0 20px;
   display: flex;
 `
 function MainBox(){
