@@ -58,6 +58,16 @@ function Cards(props){
         const id=event.dataTransfer.getData('card')
         event.target.append(document.getElementById(id))
     }
+    function getRandomId(length) {
+        let result           = '';
+        let characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        let charactersLength = characters.length;
+        for ( var i = 0; i < length; i++ ) {
+            result += characters.charAt(Math.floor(Math.random() * charactersLength));
+        }
+        return result;
+    }
+
     return (
         <CardsBox onDragOver={actionDragOver} onDrop={actionOnDrop}>
             {props.cards.cards.map((card, index)=>{
@@ -68,7 +78,7 @@ function Cards(props){
                         textDecoration
                     }
                 }
-                return <Card key={index} id={card.text.slice(0, 5)} draggable="true" onDragstart={actionDragStart}>
+                return <Card key={getRandomId(5)} id={getRandomId(8)} draggable="true" onDragstart={actionDragStart}>
                     <p>{card.text}</p>
                     <time>{card.time}</time>
                 </Card>
