@@ -9,9 +9,6 @@ import avatar from "../images/img/avatar.png";
 import WithCounter from "./WithCounter";
 import HeaderModal from "./HeaderModal";
 
-
-const { bgButtonDisabled, bgButtonEnabled,textGrey, textWhite, textBlack, bgMain}=theme
-
 const HeaderBox=styled.div`
   width: 100%;
   height: 80px;
@@ -51,8 +48,7 @@ const InfoBox=styled.div`
 `
 const buttons=['+ add New', 'kanbah', 'filter']
 
-function Header() {
-    const stylesForCounter={
+const stylesForCounter={
     bgColor: "red",
     padding: "3px",
     position: "absolute",
@@ -62,17 +58,18 @@ function Header() {
     color: "white",
     fontSize: "13px"
 }
-    const style={
-        bgColor: "#f5f8fa"
-    }
-    const [selected, setSelected]= useState(null)
+const styleForSearch={
+    bgColor: "#f5f8fa"
+}
+
+function Header() {
+const [selected, setSelected]= useState(null)
 function clickButton () {
     if (selected===this.name){
         setSelected(null)
     } else {
         setSelected(this.name)
     }
-
 }
 
 function getClasses() {
@@ -101,7 +98,7 @@ function getVisibleMenu () {
                 })}
             </ButtonsBox>
             <InfoBox>
-                <Search classes='search search_info' style={style}/>
+                <Search classes='search search_info' style={styleForSearch}/>
                 <WithCounter src={IconBall} styles={stylesForCounter} count="33+"/>
                 <img width="40px"  height="40px" src={avatar} alt='Аватар'/>
             </InfoBox>

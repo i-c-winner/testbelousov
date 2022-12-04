@@ -20,7 +20,7 @@ const StatusesWrapper=styled.div`
   display: flex;
   height: calc(100% - 61px);
 `
-const Main=styled.div`
+const SectionMain=styled.div`
   width: 100%;
   padding-right: 20px;
   background-color: #fff;
@@ -35,7 +35,7 @@ const Separator=styled.div`
   background-color: rgba(25, 25, 25, .1);
 `
 function SectionMane(){
-    return(<Main>
+    return(<SectionMain>
         <Header />
             <Body>
                <CreatedStatus>
@@ -46,14 +46,13 @@ function SectionMane(){
                             return <Cards key={card.title} cards={card}/>
                         })}
                     </StatusesWrapper>
-
                </CreatedStatus>
                <CreatingStatus>
                    <Titles titles={[createData]}/>
                    <Separator />
                </CreatingStatus>
             </Body>
-    </Main>
+    </SectionMain>
     )
 }
 export default SectionMane
