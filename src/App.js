@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import SectoionBox from "./components/SectoionBox";
-import ToolsMenu from "./components/ToolsBox";
+import ToolsMenu from "./components/SectionTools";
 import MainBox from "./components/MainBox";
 const Div =styled.div`
   display: flex;

@@ -16,10 +16,9 @@ const TextItem=styled.p`
 `
 function Item (props) {
     return (<ItemWrapper>
-        <Icon className={props.classes} src={props.src||''}></Icon>
-        <TextItem>{props.item}</TextItem>
-    </ItemWrapper>
-
+              <Icon className={props.classes} src={props.src||''}></Icon>
+              <TextItem>{props.item}</TextItem>
+           </ItemWrapper>
            )
 }
 

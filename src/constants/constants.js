@@ -1,3 +1,5 @@
+import {IconCalendar, IconFiles, IconNotes, IconRoadMap, IconTasks} from "../images/svg";
+
 const newTask={
     title: "New Task",
     count: 4,
@@ -91,4 +93,26 @@ const createData= {
     count: 0,
     cards: []
 }
-export {newTask, scheduled, inProgress, compeled, createData}
+
+const items=[{
+    name: "Roadmap",
+    icon: IconRoadMap
+},
+    {
+        name: "Schedule",
+        icon: IconCalendar
+    },
+    {
+        name: "Tasks",
+        icon: IconTasks
+    },
+    {
+        name: "Notes",
+        icon: IconNotes
+    },
+    {
+        name: "Files",
+        icon: IconFiles
+    }
+]
+export {newTask, scheduled, inProgress, compeled, createData, items}
