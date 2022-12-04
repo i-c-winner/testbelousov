@@ -59,7 +59,8 @@ const stylesForCounter={
     fontSize: "13px"
 }
 const styleForSearch={
-    bgColor: "#f5f8fa"
+    bgColor: "#f5f8fa",
+    borderRadius: "20px",
 }
 
 function Header() {
