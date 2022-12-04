@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import SectoionBox from "./components/SectoionBox";
 import ToolsMenu from "./components/SectionTools";
-import MainBox from "./components/MainBox";
+import SectionMane from "./components/SectionMane";
 const Div =styled.div`
   display: flex;
   height: 100vh;
@@ -13,7 +13,7 @@ function App() {
     <Div>
      <SectoionBox />
      <ToolsMenu />
-     <MainBox />
+     <SectionMane />
     </Div>
   );
 }

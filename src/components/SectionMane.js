@@ -34,7 +34,7 @@ const Separator=styled.div`
   height: 1px;
   background-color: rgba(25, 25, 25, .1);
 `
-function MainBox(){
+function SectionMane(){
     return(<Main>
         <Header />
             <Body>
@@ -56,4 +56,4 @@ function MainBox(){
     </Main>
     )
 }
-export default MainBox
+export default SectionMane
