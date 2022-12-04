@@ -22,6 +22,7 @@ const Card=styled.div`
   width: 85%;
   margin-top: 10px;    
   min-width: 150px;
+  text-decoration: ${props=>props.theme.textDecoration};
 `
 function getColor(card) {
     if (card.title==="Compeled") {
@@ -33,13 +34,16 @@ function getColor(card) {
 }
 
 function Cards(props){
+    const textDecoration = props.cards.title==='Compeled'? "line-through": 'initial'
+
     return (
         <CardsBox>
             {props.cards.cards.map((card, index)=>{
                 const color= getColor(props.cards)
                 Card.defaultProps={
                     theme:{
-                        bgColor:color
+                        bgColor:color,
+                        textDecoration
                     }
                 }
                 return <Card key={index}>

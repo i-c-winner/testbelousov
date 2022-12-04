@@ -103,7 +103,7 @@ function getVisibleMenu () {
             <InfoBox>
                 <Search classes='search search_info' style={style}/>
                 <WithCounter src={IconBall} styles={stylesForCounter} count="33+"/>
-                <img width="22px"  height="22px" src={avatar} alt='Аватар'/>
+                <img width="40px"  height="40px" src={avatar} alt='Аватар'/>
             </InfoBox>
         </HeaderBox>
     )
