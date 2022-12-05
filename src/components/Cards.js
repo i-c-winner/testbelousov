@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Card from "./Card";
+import getRandomText from "../utils/getRandomText";
 
 const CardsBoxElement=({className, children, onDragOver, onDrop})=>{
     return <div className={className} children={children} onDragOver={onDragOver} onDrop={onDrop}>
@@ -28,7 +29,7 @@ function Cards(props){
     return (
         <CardsBox onDragOver={actionDragOver} onDrop={actionOnDrop}>
             {props.cards.cards.map((card, index)=>{
-              return <Card card={card} title={props.cards.title}/>
+              return <Card key={getRandomText(5)} card={card} title={props.cards.title}/>
             })}
         </CardsBox>
     )

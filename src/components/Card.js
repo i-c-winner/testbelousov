@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import styled from "styled-components";
+import getRandomText from "../utils/getRandomText";
 
 const CardElement=({className, children, onDragstart, draggable, id})=>{
     return <div className={className} children={children} onDragStart={onDragstart} id={id} draggable={draggable}>
@@ -30,15 +31,7 @@ function getColor(title) {
     return color[render]
 }
 
-function getRandomId(length) {
-    let result           = '';
-    let characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    let charactersLength = characters.length;
-    for ( var i = 0; i < length; i++ ) {
-        result += characters.charAt(Math.floor(Math.random() * charactersLength));
-    }
-    return result;
-}
+
 
 function Card (props) {
     const textDecoration = props.title==='Compeled'? "line-through": 'initial'
@@ -54,13 +47,8 @@ function Card (props) {
         theme:propsTheme
     }
 
-    useEffect(()=>{
-        setPropsTheme({
-            bgColor: "red"
-        })
-    },[])
     return (
-         <CardWrapper key={getRandomId(5)} id={getRandomId(8)} draggable="true" onDragstart={actionDragStart}>
+         <CardWrapper key={getRandomText(5)} id={getRandomText(8)} draggable="true" onDragstart={actionDragStart}>
            <p>{props.card.text}</p>
            <time>{props.card.time}</time>
          </CardWrapper>
